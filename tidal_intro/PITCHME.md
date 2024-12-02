@@ -113,6 +113,8 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 
 ```d1 $ s "808" # n "[1 2 3 4 5]/6"```
 
+---
+
 - `#` is shorthand for `|>` taking structure from left
 - [Other ways of combining structure](https://tidalcycles.org/docs/reference/pattern_structure)
 
