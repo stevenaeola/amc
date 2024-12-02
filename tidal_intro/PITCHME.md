@@ -24,7 +24,8 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - (Slightly) Under the Hood
 - Sequencing sounds
 - Functions on Patterns
-- Mini-notation
+- Mini-notation and Combining Patterns
+- Other stuff
 
 ---
 
@@ -66,6 +67,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 ``` d1 $ sound "bd"```
 
 - Stop with `hush` (and/or keyboard shortcut)
+- See [workshop](https://tidalcycles.org/docs/patternlib/tutorials/workshop) and [video course](https://tidalcycles.org/docs/patternlib/tutorials/course1)
 
 ---
 
@@ -126,7 +128,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 
 ## Other stuff
 
-- [Low-frequency oscillators](https://tidalcycles.org/docs/reference/oscillators)
+- [Continuous patterns/oscillators](https://tidalcycles.org/docs/reference/oscillators)
 - [Synthesisers](https://tidalcycles.org/docs/reference/synthesizers)
 - [Audio effects](https://tidalcycles.org/docs/reference/audio_effects)
 - [Transitions](https://tidalcycles.org/docs/reference/transitions)
