@@ -1,6 +1,5 @@
 # Advanced Music Computation
-## Introduction to Live Coding with Tidal
-{data-background-color=#7E317B}
+## Introduction to Live Coding with Tidal {data-background-color=#7E317B}
 
 ---
 

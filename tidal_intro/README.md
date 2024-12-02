@@ -1,6 +1,5 @@
 # Advanced Music Computation
-## Introduction to Live Coding with Tidal
-
+## Introduction to Live Coding with Tidal 
 
 
 `performing arts form and a creativity technique centred upon the writing of source code and the use of interactive programming in an improvised way`
