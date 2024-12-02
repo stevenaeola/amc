@@ -74,10 +74,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 ## (Slightly) Under the Hood
 
 - Tidal sends OSC messages to SuperCollider
-- Ask SuperCollider to show OSC messages
-
-```s.dumpOSC(1)```
-
+- Ask SuperCollider to show OSC messages ```s.dumpOSC(1)```
 - See what happens when you ask for a non-existent sound
 - List of samples in [Default library](https://tidalcycles.org/docs/configuration/AudioSamples/default_library/)
 - `d1` is the first of 16 numbered functions which send the parameter to audio
