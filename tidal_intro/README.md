@@ -76,13 +76,8 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 
 - Nearly all strings are sequencable
 - Sounds are spaced evenly over a cycle
-- Some samples have more than one variant, select with colon e.g.
-
-``` d1 $ sound "bd 808:3"```
-
-- Set cycles per second with e.g. 
-
-```setcps 0.6```
+- Some samples have more than one variant, select with colon e.g. `d1 $ sound "bd 808:3"`
+- Set cycles per second with e.g. `setcps 0.6`
 
 
 ## Functions on Patterns
