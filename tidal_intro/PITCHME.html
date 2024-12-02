@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>PITCHME</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="advanced-music-computation"
+class="title-slide slide level1">
+<h1>Advanced Music Computation</h1>
+
+</section>
+<section id="introduction-to-live-coding-with-tidal"
+class="slide level2">
+<h2>Introduction to Live Coding with Tidal</h2>
+<p>{data-background-color=#7E317B}</p>
+</section>
+<section class="slide level2">
+
+<p><code>performing arts form and a creativity technique centred upon the writing of source code and the use of interactive programming in an improvised way</code></p>
+<p><a href="wikipedia">https://en.wikipedia.org/wiki/Live_coding</a></p>
+</section>
+<section class="slide level2">
+
+<figure>
+<img
+data-src="https://upload.wikimedia.org/wikipedia/commons/0/07/Anna_Xamb%C3%B3_live_coding_at_the_Noiselets_microfestival_in_Barcelona.jpg"
+alt="Anna Xambó live coding at the Noiselets microfestival in Barcelona" />
+<figcaption aria-hidden="true">Anna Xambó live coding at the Noiselets
+microfestival in Barcelona</figcaption>
+</figure>
+<p>Photo by Helena Coll, CC BY-SA 4.0 <a
+href="https://creativecommons.org/licenses/by-sa/4.0"
+class="uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via
+Wikimedia Commons</p>
+</section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li>What is Live Coding?</li>
+<li>Live Coding Languages for Music</li>
+<li>Starting with Tidal</li>
+<li>(Slightly) Under the Hood</li>
+<li>Sequencing sounds</li>
+<li>Functions on Patterns</li>
+<li>Mini-notation</li>
+</ul>
+</section>
+<section id="what-is-live-coding" class="slide level2">
+<h2>What is Live Coding?</h2>
+<div>
+<ul>
+<li class="fragment">Live i.e. performed</li>
+<li class="fragment">Coding i.e. programming</li>
+<li class="fragment">Usually music</li>
+<li class="fragment">Typically performed with a PA and projected
+code</li>
+<li class="fragment">Sometimes solo, sometimes ensemble</li>
+<li class="fragment">Sometimes with live-coded graphics</li>
+<li class="fragment">Perhaps niche/nerdy but definite <a
+href="community">https://blog.toplap.org/</a></li>
+</ul>
+</div>
+</section>
+<section id="live-coding-languages-for-music" class="slide level2">
+<h2>Live Coding Languages for Music</h2>
+<ul>
+<li><a href="ChucK%20(C-ish)">http://chuck.cs.princeton.edu/</a></li>
+<li><a
+href="Supercollider%20(smalltalk)">https://supercollider.github.io/</a></li>
+<li><a href="SonicPi%20(ruby)">https://sonic-pi.net/</a></li>
+<li><a href="Orca%20(???)">https://100r.co/site/orca.html</a></li>
+<li><a
+href="Tidal%20Cycles%20(haskell)">https://tidalcycles.org/</a></li>
+<li><a href="Strudel%20(JS)">https://strudel.cc/</a></li>
+<li><a
+href="Foxdot/Renaldo%20(python)">https://github.com/e-lie/renardo</a></li>
+</ul>
+</section>
+<section id="starting-with-tidal" class="slide level2">
+<h2>Starting with Tidal</h2>
+<ul>
+<li>Install</li>
+<li>Start SuperCollider</li>
+<li>Environment: VSC .tidal extension</li>
+<li>First sound: execute with ctrl-enter</li>
+</ul>
+<p><code>d1 $ sound "bd"</code></p>
+<ul>
+<li>Stop with ctrl-h or</li>
+</ul>
+<p><code>hush</code></p>
+</section>
+<section id="slightly-under-the-hood" class="slide level2">
+<h2>(Slightly) Under the Hood</h2>
+<ul>
+<li>Tidal sends OSC messages to SuperCollider</li>
+<li>Ask SuperCollider to show OSC messages</li>
+</ul>
+<p><code>s.dumpOSC(1)</code></p>
+<ul>
+<li>See what happens when you ask for a non-existent sound</li>
+<li>List of samples in <a
+href="Default%20library">https://tidalcycles.org/docs/configuration/AudioSamples/default_library/</a></li>
+<li><code>d1</code> is the first of 16 numbered functions which send the
+parameter to audio</li>
+<li><code>$</code> is for function application with brackets</li>
+</ul>
+</section>
+<section id="sequencing-sounds" class="slide level2">
+<h2>Sequencing sounds</h2>
+<ul>
+<li>Nearly all strings are sequencable</li>
+<li>Sounds are spaced evenly over a cycle</li>
+<li>Some samples have more than one variant, select with colon e.g.</li>
+</ul>
+<p><code>d1 $ sound "bd 808:3"</code></p>
+<ul>
+<li>Set cycles per second with e.g. </li>
+</ul>
+<p><code>setcps 0.6</code></p>
+</section>
+<section id="functions-on-patterns" class="slide level2">
+<h2>Functions on Patterns</h2>
+<ul>
+<li>A pattern is a function from time to value</li>
+<li>Patterns can be transformed with (higher-order) functions</li>
+</ul>
+<p><code>d2 $ fast 3 $ sound "blip"</code></p>
+<ul>
+<li>Pattern transformation functions include: <a
+href="slow">https://tidalcycles.org/docs/reference/time/#speeding-up-slowing-down</a>;
+<a
+href="brak">https://tidalcycles.org/docs/reference/concatenation/#brak</a>;
+<a
+href="degrade">https://tidalcycles.org/docs/reference/alteration/#degrade</a></li>
+<li>See <a
+href="Tidal%20reference">https://tidalcycles.org/docs/reference/cycles</a>
+for many more</li>
+<li>Pattern transformations can be applied selectively: <a
+href="every">https://tidalcycles.org/docs/reference/conditions/#every</a>;
+<a
+href="sometimes">https://tidalcycles.org/docs/reference/randomness/#the-sometimes-family</a></li>
+</ul>
+</section>
+<section id="mini-notation-and-combining-patterns" class="slide level2">
+<h2>Mini-notation and Combining Patterns</h2>
+<ul>
+<li>Some pattern functions have shorthand in <a
+href="mini-notation">https://tidalcycles.org/docs/reference/mini_notation</a></li>
+<li>Interesting ones include Euclidean and polymetric patternms</li>
+<li>Add multiple simultaneous “tracks” by having d1, d2 etc</li>
+<li>Sequence more than one property at once e.g. sample number</li>
+</ul>
+<p><code>d1 $ s "808" # n "[1 2 3 4 5]/6"</code></p>
+<ul>
+<li><code>#</code> is shorthand for <code>|&gt;</code> taking structure
+from left</li>
+<li><a
+href="Other%20ways%20of%20combining%20structure">https://tidalcycles.org/docs/reference/pattern_structure</a></li>
+</ul>
+</section>
+<section id="other-stuff" class="slide level2">
+<h2>Other stuff</h2>
+<ul>
+<li><a
+href="Low-frequency%20oscillators">https://tidalcycles.org/docs/reference/oscillators</a></li>
+<li><a
+href="Synthesisers">https://tidalcycles.org/docs/reference/synthesizers</a></li>
+<li><a
+href="Audio%20effects">https://tidalcycles.org/docs/reference/audio_effects</a></li>
+<li><a
+href="Transitions">https://tidalcycles.org/docs/reference/transitions</a></li>
+<li><a
+href="State">https://tidalcycles.org/docs/reference/state_values</a></li>
+<li><a
+href="Scales">https://tidalcycles.org/docs/reference/harmony_melody</a></li>
+<li><a
+href="Samplers">https://tidalcycles.org/docs/reference/samplers</a> and
+<a
+href="Sampling">https://tidalcycles.org/docs/reference/sampling</a></li>
+<li><a
+href="MIDI">https://tidalcycles.org/docs/configuration/MIDIOSC/midi/</a></li>
+<li>jux rev</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

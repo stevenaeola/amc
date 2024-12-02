@@ -1,21 +1,18 @@
 # Advanced Music Computation
 ## Introduction to Live Coding with Tidal
-{data-background-color=#7E317B}
 
----
+
 
 `performing arts form and a creativity technique centred upon the writing of source code and the use of interactive programming in an improvised way`
 
 [https://en.wikipedia.org/wiki/Live_coding](wikipedia)
 
----
 
 
 ![Anna Xambó live coding at the Noiselets microfestival in Barcelona](https://upload.wikimedia.org/wikipedia/commons/0/07/Anna_Xamb%C3%B3_live_coding_at_the_Noiselets_microfestival_in_Barcelona.jpg)
 
 Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
 
----
 
 ## Summary
 
@@ -27,11 +24,9 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - Functions on Patterns
 - Mini-notation
 
----
 
 ## What is Live Coding?
 
-::: incremental
 
 - Live i.e. performed
 - Coding i.e. programming
@@ -41,9 +36,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - Sometimes with live-coded graphics
 - Perhaps niche/nerdy but definite [https://blog.toplap.org/](community)
 
-:::
 
----
 
 ## Live Coding Languages for Music
 
@@ -55,7 +48,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - [https://strudel.cc/](Strudel (JS))
 - [https://github.com/e-lie/renardo](Foxdot/Renaldo (python))
 
----
 
 ## Starting with Tidal
 
@@ -70,7 +62,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 
 ```hush```
 
----
 
 ## (Slightly) Under the Hood
 
@@ -84,7 +75,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - `d1` is the first of 16 numbered functions which send the parameter to audio
 - `$` is for function application with brackets
 
----
 
 ## Sequencing sounds
 
@@ -98,7 +88,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 
 ```setcps 0.6```
 
----
 
 ## Functions on Patterns
 
@@ -111,7 +100,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - See [https://tidalcycles.org/docs/reference/cycles](Tidal reference) for many more
 - Pattern transformations can be applied selectively: [https://tidalcycles.org/docs/reference/conditions/#every](every); [https://tidalcycles.org/docs/reference/randomness/#the-sometimes-family](sometimes)
 
----
 
 ## Mini-notation and Combining Patterns
 
@@ -125,7 +113,6 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - `#` is shorthand for `|>` taking structure from left
 - [https://tidalcycles.org/docs/reference/pattern_structure](Other ways of combining structure)
 
----
 
 ## Other stuff
 
