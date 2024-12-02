@@ -97,16 +97,15 @@ href="community">https://blog.toplap.org/</a></li>
 <section id="live-coding-languages-for-music" class="slide level2">
 <h2>Live Coding Languages for Music</h2>
 <ul>
-<li><a href="ChucK%20(C-ish)">http://chuck.cs.princeton.edu/</a></li>
-<li><a
-href="Supercollider%20(smalltalk)">https://supercollider.github.io/</a></li>
-<li><a href="SonicPi%20(ruby)">https://sonic-pi.net/</a></li>
-<li><a href="Orca%20(???)">https://100r.co/site/orca.html</a></li>
-<li><a
-href="Tidal%20Cycles%20(haskell)">https://tidalcycles.org/</a></li>
-<li><a href="Strudel%20(JS)">https://strudel.cc/</a></li>
-<li><a
-href="Foxdot/Renaldo%20(python)">https://github.com/e-lie/renardo</a></li>
+<li><a href="http://chuck.cs.princeton.edu/">ChucK (C-ish)</a></li>
+<li><a href="https://supercollider.github.io/">Supercollider
+(smalltalk)</a></li>
+<li><a href="https://sonic-pi.net/">SonicPi (ruby)</a></li>
+<li><a href="https://100r.co/site/orca.html">Orca (???)</a></li>
+<li><a href="https://tidalcycles.org/">Tidal Cycles (haskell)</a></li>
+<li><a href="https://strudel.cc/">Strudel (JS)</a></li>
+<li><a href="https://github.com/e-lie/renardo">Foxdot/Renaldo
+(python)</a></li>
 </ul>
 </section>
 <section id="starting-with-tidal" class="slide level2">
@@ -119,9 +118,8 @@ href="Foxdot/Renaldo%20(python)">https://github.com/e-lie/renardo</a></li>
 </ul>
 <p><code>d1 $ sound "bd"</code></p>
 <ul>
-<li>Stop with ctrl-h or</li>
+<li>Stop with <code>hush</code> (and/or keyboard shortcut)</li>
 </ul>
-<p><code>hush</code></p>
 </section>
 <section id="slightly-under-the-hood" class="slide level2">
 <h2>(Slightly) Under the Hood</h2>
@@ -133,7 +131,8 @@ href="Foxdot/Renaldo%20(python)">https://github.com/e-lie/renardo</a></li>
 <ul>
 <li>See what happens when you ask for a non-existent sound</li>
 <li>List of samples in <a
-href="Default%20library">https://tidalcycles.org/docs/configuration/AudioSamples/default_library/</a></li>
+href="https://tidalcycles.org/docs/configuration/AudioSamples/default_library/">Default
+library</a></li>
 <li><code>d1</code> is the first of 16 numbered functions which send the
 parameter to audio</li>
 <li><code>$</code> is for function application with brackets</li>
@@ -161,25 +160,24 @@ parameter to audio</li>
 <p><code>d2 $ fast 3 $ sound "blip"</code></p>
 <ul>
 <li>Pattern transformation functions include: <a
-href="slow">https://tidalcycles.org/docs/reference/time/#speeding-up-slowing-down</a>;
+href="https://tidalcycles.org/docs/reference/time/#speeding-up-slowing-down">slow</a>;
 <a
-href="brak">https://tidalcycles.org/docs/reference/concatenation/#brak</a>;
+href="https://tidalcycles.org/docs/reference/concatenation/#brak">brak</a>;
 <a
-href="degrade">https://tidalcycles.org/docs/reference/alteration/#degrade</a></li>
-<li>See <a
-href="Tidal%20reference">https://tidalcycles.org/docs/reference/cycles</a>
-for many more</li>
+href="https://tidalcycles.org/docs/reference/alteration/#degrade">degrade</a></li>
+<li>See <a href="https://tidalcycles.org/docs/reference/cycles">Tidal
+reference</a> for many more</li>
 <li>Pattern transformations can be applied selectively: <a
-href="every">https://tidalcycles.org/docs/reference/conditions/#every</a>;
+href="https://tidalcycles.org/docs/reference/conditions/#every">every</a>;
 <a
-href="sometimes">https://tidalcycles.org/docs/reference/randomness/#the-sometimes-family</a></li>
+href="https://tidalcycles.org/docs/reference/randomness/#the-sometimes-family">sometimes</a></li>
 </ul>
 </section>
 <section id="mini-notation-and-combining-patterns" class="slide level2">
 <h2>Mini-notation and Combining Patterns</h2>
 <ul>
 <li>Some pattern functions have shorthand in <a
-href="mini-notation">https://tidalcycles.org/docs/reference/mini_notation</a></li>
+href="https://tidalcycles.org/docs/reference/mini_notation">mini-notation</a></li>
 <li>Interesting ones include Euclidean and polymetric patternms</li>
 <li>Add multiple simultaneous “tracks” by having d1, d2 etc</li>
 <li>Sequence more than one property at once e.g. sample number</li>
@@ -189,30 +187,32 @@ href="mini-notation">https://tidalcycles.org/docs/reference/mini_notation</a></l
 <li><code>#</code> is shorthand for <code>|&gt;</code> taking structure
 from left</li>
 <li><a
-href="Other%20ways%20of%20combining%20structure">https://tidalcycles.org/docs/reference/pattern_structure</a></li>
+href="https://tidalcycles.org/docs/reference/pattern_structure">Other
+ways of combining structure</a></li>
 </ul>
 </section>
 <section id="other-stuff" class="slide level2">
 <h2>Other stuff</h2>
 <ul>
 <li><a
-href="Low-frequency%20oscillators">https://tidalcycles.org/docs/reference/oscillators</a></li>
+href="https://tidalcycles.org/docs/reference/oscillators">Low-frequency
+oscillators</a></li>
 <li><a
-href="Synthesisers">https://tidalcycles.org/docs/reference/synthesizers</a></li>
+href="https://tidalcycles.org/docs/reference/synthesizers">Synthesisers</a></li>
+<li><a href="https://tidalcycles.org/docs/reference/audio_effects">Audio
+effects</a></li>
 <li><a
-href="Audio%20effects">https://tidalcycles.org/docs/reference/audio_effects</a></li>
+href="https://tidalcycles.org/docs/reference/transitions">Transitions</a></li>
 <li><a
-href="Transitions">https://tidalcycles.org/docs/reference/transitions</a></li>
+href="https://tidalcycles.org/docs/reference/state_values">State</a></li>
 <li><a
-href="State">https://tidalcycles.org/docs/reference/state_values</a></li>
+href="https://tidalcycles.org/docs/reference/harmony_melody">Scales</a></li>
 <li><a
-href="Scales">https://tidalcycles.org/docs/reference/harmony_melody</a></li>
-<li><a
-href="Samplers">https://tidalcycles.org/docs/reference/samplers</a> and
+href="https://tidalcycles.org/docs/reference/samplers">Samplers</a> and
 <a
-href="Sampling">https://tidalcycles.org/docs/reference/sampling</a></li>
+href="https://tidalcycles.org/docs/reference/sampling">Sampling</a></li>
 <li><a
-href="MIDI">https://tidalcycles.org/docs/configuration/MIDIOSC/midi/</a></li>
+href="https://tidalcycles.org/docs/configuration/MIDIOSC/midi/">MIDI</a></li>
 <li>jux rev</li>
 </ul>
 </section></section>
