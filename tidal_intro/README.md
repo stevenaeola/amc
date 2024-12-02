@@ -34,7 +34,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - Typically performed with a PA and projected code
 - Sometimes solo, sometimes ensemble
 - Sometimes with live-coded graphics
-- Perhaps niche/nerdy but definite [https://blog.toplap.org/](community)
+- Perhaps niche/nerdy but definite [community](https://blog.toplap.org/)
 
 
 
