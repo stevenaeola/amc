@@ -54,10 +54,7 @@ Photo by Helena Coll, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4
 - Install
 - Start SuperCollider
 - Environment: VSC .tidal extension
-- First sound: execute with ctrl-enter
-
-``` d1 $ sound "bd"```
-
+- First sound: execute with ctrl-enter ``` d1 $ sound "bd"```
 - Stop with `hush` (and/or keyboard shortcut)
 - See [workshop](https://tidalcycles.org/docs/patternlib/tutorials/workshop) and [video course](https://tidalcycles.org/docs/patternlib/tutorials/course1)
 
