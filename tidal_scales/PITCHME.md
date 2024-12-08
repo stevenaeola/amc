@@ -7,9 +7,10 @@ Duplicate some rhythms with bd sd cp hh
 
 - [sample 1](./sample1.mp3)
 - [sample 2](./sample2.mp3)
-- [sample 2](./sample3.mp3)
+- [sample 3](./sample3.mp3)
 
 ---
+
 ## Simple sound design
 
 Design two sounds: one for tune, one for bass
@@ -20,6 +21,7 @@ Design two sounds: one for tune, one for bass
 - filter with `# djf x` default 0.5, low-pass lower, high-pass higher
 - separate/smooth with `# legato x` default 1.0
 - lower by octave with `|- note 12`
+
 
 ---
 
