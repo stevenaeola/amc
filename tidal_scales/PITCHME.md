@@ -14,9 +14,13 @@ Duplicate some rhythms with bd sd cp hh
 ## Simple sound design
 
 Design two sounds: one for tune, one for bass
+
 - bass sound from superhammond, moog, bass1:0 (or select from 29 others)
 - tune sound from supercomparator, blip, supermandolin,  superpwm, gtr:0
 - change volume with `# gain x` default 1.0
+
+---
+
 - add reverb with `# room y` (careful with volume)
 - filter with `# djf x` default 0.5, low-pass lower, high-pass higher
 - separate/smooth with `# legato x` default 1.0
