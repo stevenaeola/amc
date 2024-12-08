@@ -5,6 +5,10 @@
 
 Duplicate some rhythms with bd sd cp hh
 
+- [sample 1](./sample1.mp3)
+- [sample 2](./sample2.mp3)
+- [sample 2](./sample3.mp3)
+
 ---
 ## Simple sound design
 
@@ -18,6 +22,7 @@ Design two sounds: one for tune, one for bass
 - lower by octave with `|- note 12`
 
 ---
+
 ## Tune and bass
 
 Jingle bells on piano fingers (counting from 0)
