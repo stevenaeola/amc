@@ -76,9 +76,11 @@ high-pass higher</li>
 <section id="tune-and-bass" class="slide level2">
 <h2>Tune and bass</h2>
 <p>Jingle bells on piano fingers (counting from 0)</p>
-<p><code>setcps (80/(60*4))</code></p>
-<p><code>melody = "[2 2 2 _ 2 2 2 _ 2 4 0 1 2 _ _ _ 3 3 3 3 3 2 2 2 2 1 1 2 1 _ 4 _]/4"</code></p>
-<p><code>bass = "[0 _ 0 _ 3 0 4 _]/4"</code></p>
+<pre><code>setcps (80/(60*4))
+
+melody = &quot;[2 2 2 _ 2 2 2 _ 2 4 0 1 2 _ _ _ 3 3 3 3 3 2 2 2 2 1 1 2 1 _ 4 _]/4&quot;
+
+bass = &quot;[0 _ 0 _ 3 0 4 _]/4&quot;</code></pre>
 <p>Play tune with</p>
 <pre><code>d1 $ note (scale &quot;major&quot; $ melody) 
    # sound &quot;supercomparator&quot;</code></pre>

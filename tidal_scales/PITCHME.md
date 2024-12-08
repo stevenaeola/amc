@@ -33,11 +33,13 @@ Design two sounds: one for tune, one for bass
 
 Jingle bells on piano fingers (counting from 0)
 
-`setcps (80/(60*4))`
+```
+setcps (80/(60*4))
 
-`melody = "[2 2 2 _ 2 2 2 _ 2 4 0 1 2 _ _ _ 3 3 3 3 3 2 2 2 2 1 1 2 1 _ 4 _]/4"`
+melody = "[2 2 2 _ 2 2 2 _ 2 4 0 1 2 _ _ _ 3 3 3 3 3 2 2 2 2 1 1 2 1 _ 4 _]/4"
 
-`bass = "[0 _ 0 _ 3 0 4 _]/4"`
+bass = "[0 _ 0 _ 3 0 4 _]/4"
+```
 
 Play tune with
 
