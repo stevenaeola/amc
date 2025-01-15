@@ -1,6 +1,5 @@
 # Advanced Music Computation
 ## Interfacing and MIDI
----
 
 What Electronic Music is Made of
 - Music Protocols
@@ -12,7 +11,6 @@ What Electronic Music is Made of
 - MIDI and Tidal
 - Other fun things to do with MIDI
 
----
 
 ## What Electronic Music is Made of
 
@@ -23,7 +21,6 @@ What Electronic Music is Made of
 - How do you play specified notes e.g. a score?
 - How do humans get involved?
 
----
 
 ## Music Protocols
 
@@ -33,7 +30,6 @@ What Electronic Music is Made of
   - And MIDI Polyphonic Expression (MPE)
 - Open Sound Control (OSC)
 
----
 
 ## [MIDI](https://en.wikipedia.org/wiki/MIDI)
 
@@ -43,7 +39,6 @@ What Electronic Music is Made of
 - TRS jacks for serial sometimes used
 - Also via bluetooth, ethernet
 
----
 
 ## MIDI messages
 
@@ -53,7 +48,6 @@ What Electronic Music is Made of
 - Channel mode messages e.g. all notes off
 - System messages e.g. timing clock
 
----
 
 ## MIDI basics
 
@@ -66,7 +60,6 @@ What Electronic Music is Made of
 - Each in 7 bits i.e. 0-127
 - If a "note off" is missed then note is "stuck on"
 
----
 
 ## MIDI setup
 
@@ -77,11 +70,9 @@ What Electronic Music is Made of
 - MIDI controller e.g. sequencer sends a series of messages
 - MIDI instrument can be virtual (VST) or physical (hardware synth)
 
----
 
 ## Demo
 
----
 
 ## MIDI Control Change (CC)
 
@@ -92,7 +83,6 @@ What Electronic Music is Made of
   - Modulation of filters
 - [Official list](https://midi.org/midi-1-0-control-change-messages)
 
----
 
 ## Other MIDI messages
 
@@ -101,7 +91,6 @@ What Electronic Music is Made of
 - Time codes
 - SysEx (vendor specific)
 
----
 
 ## MIDI limitations
 
@@ -112,7 +101,6 @@ What Electronic Music is Made of
 - Serial: one note at a time
   - With fast serial like USB this is not audible
 
----
 
 ## MIDI 1.0 Extensions
 
@@ -124,7 +112,6 @@ What Electronic Music is Made of
   - Profiles
   - Compatible with 1.0
 
----
 
 ## MIDI Alternatives
 
@@ -139,7 +126,6 @@ What Electronic Music is Made of
   - Gates and triggers to turn things on and off
   - Used in (semi-)modular synthesisers
 
----
 
 ## Some MIDI controllers I have
 
@@ -150,7 +136,6 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 
 - Roli Seabord. One fan is [Andrew Huang](https://youtu.be/pSPJTMcpG98?si=6VKEU9r-_KV_QSGm)
 
---- 
 
 ## MIDI and Tidal
 
@@ -162,7 +147,6 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 - Read CC values e.g. for volume, filter control
 - No easy way to read note on/off
 
----
 
 ## Other fun things to do with MIDI
 

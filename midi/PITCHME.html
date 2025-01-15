@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>PITCHME</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="advanced-music-computation"
+class="title-slide slide level1">
+<h1>Advanced Music Computation</h1>
+
+</section>
+<section id="interfacing-and-midi" class="slide level2">
+<h2>## Interfacing and MIDI</h2>
+<p>What Electronic Music is Made of - Music Protocols - MIDI note
+messages, setup and demo - MIDI Control Change (CC) and other messages -
+Limitations and extensions - Alternatives - controllers - MIDI and Tidal
+- Other fun things to do with MIDI</p>
+</section>
+<section id="what-electronic-music-is-made-of" class="slide level2">
+<h2>What Electronic Music is Made of</h2>
+<ul>
+<li>Not all Electronic Music is Computational</li>
+<li>Not all Computational Music is Electronic</li>
+<li>But there is a big overlap</li>
+<li>How do you specify what notes to play when?</li>
+<li>How do you play specified notes e.g. a score?</li>
+<li>How do humans get involved?</li>
+</ul>
+</section>
+<section id="music-protocols" class="slide level2">
+<h2>Music Protocols</h2>
+<ul>
+<li>For communication</li>
+<li>But also for storage e.g. MIDI files (c.f. JSON)</li>
+<li>Musical Instrument Digital Interface (MIDI)
+<ul>
+<li>And MIDI Polyphonic Expression (MPE)</li>
+</ul></li>
+<li>Open Sound Control (OSC)</li>
+</ul>
+</section>
+<section id="midi" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a></h2>
+<ul>
+<li>Interchange standard from 1983 (1.0)</li>
+<li>Originally over serial 5-pin DIN (in, out and thru)</li>
+<li>MIDI over USB now common</li>
+<li>TRS jacks for serial sometimes used</li>
+<li>Also via bluetooth, ethernet</li>
+</ul>
+</section>
+<section id="midi-messages" class="slide level2">
+<h2>MIDI messages</h2>
+<ul>
+<li>One status byte followed by one or two data bytes</li>
+<li>Channel number is encoded in bottom nybble of status: 16
+channels</li>
+<li>Channel voice messages e.g. note on and off</li>
+<li>Channel mode messages e.g. all notes off</li>
+<li>System messages e.g. timing clock</li>
+</ul>
+</section>
+<section id="midi-basics" class="slide level2">
+<h2>MIDI basics</h2>
+<ul>
+<li>“Note on” and “note off”</li>
+<li>Sent by a controller</li>
+<li>Played by an instrument</li>
+<li>Channel per instrument (with daisy-chaining for serial)</li>
+<li>First data byte for note value</li>
+<li>Second data byte for velocity</li>
+<li>Each in 7 bits i.e. 0-127</li>
+<li>If a “note off” is missed then note is “stuck on”</li>
+</ul>
+</section>
+<section id="midi-setup" class="slide level2">
+<h2>MIDI setup</h2>
+<ul>
+<li>Use DAW e.g. <a href="https://www.reaper.fm/">Reaper</a> for
+routing</li>
+<li>A MIDI track has a source of data
+<ul>
+<li>MIDI piano roll or</li>
+<li>MIDI controller (physical or virtual)</li>
+</ul></li>
+<li>MIDI controller e.g. sequencer sends a series of messages</li>
+<li>MIDI instrument can be virtual (VST) or physical (hardware
+synth)</li>
+</ul>
+</section>
+<section id="demo" class="slide level2">
+<h2>Demo</h2>
+</section>
+<section id="midi-control-change-cc" class="slide level2">
+<h2>MIDI Control Change (CC)</h2>
+<ul>
+<li>Often sourced from external hardware (buttons/knobs)</li>
+<li>Used for performance expression/control
+<ul>
+<li>Piano sustain pedal</li>
+<li>Overall volume</li>
+<li>Modulation of filters</li>
+</ul></li>
+<li><a href="https://midi.org/midi-1-0-control-change-messages">Official
+list</a></li>
+</ul>
+</section>
+<section id="other-midi-messages" class="slide level2">
+<h2>Other MIDI messages</h2>
+<ul>
+<li>Program control: select synth presets</li>
+<li>Aftertouch and pitch bend</li>
+<li>Time codes</li>
+<li>SysEx (vendor specific)</li>
+</ul>
+</section>
+<section id="midi-limitations" class="slide level2">
+<h2>MIDI limitations</h2>
+<ul>
+<li>Resolution: 7 bits
+<ul>
+<li>Some controls can be “high resolution” i.e. 2 bytes</li>
+</ul></li>
+<li>12 tone equal temperament
+<ul>
+<li>Can use pitch bend</li>
+</ul></li>
+<li>Serial: one note at a time
+<ul>
+<li>With fast serial like USB this is not audible</li>
+</ul></li>
+</ul>
+</section>
+<section id="midi-1.0-extensions" class="slide level2">
+<h2>MIDI 1.0 Extensions</h2>
+<ul>
+<li>MIDI Polyphonic Expression (MPE) 2018
+<ul>
+<li>Per-note control of expression (not per-channel)</li>
+</ul></li>
+<li>MIDI 2.0 (2020/2023)
+<ul>
+<li>Increased resolution</li>
+<li>Bidirectional</li>
+<li>Profiles</li>
+<li>Compatible with 1.0</li>
+</ul></li>
+</ul>
+</section>
+<section id="midi-alternatives" class="slide level2">
+<h2>MIDI Alternatives</h2>
+<ul>
+<li>Open Sound Control (OSC) 2002
+<ul>
+<li>Notes can be played in bundles</li>
+<li>Time tags can be relative or absolute</li>
+<li>High-resolution data</li>
+<li>Symbolic naming</li>
+<li>Used by SuperCollider (and hence Tidal)</li>
+</ul></li>
+<li>Control Voltage (CV) 1995 (Eurorack)
+<ul>
+<li>Continuous time and voltage range: analogue</li>
+<li>Gates and triggers to turn things on and off</li>
+<li>Used in (semi-)modular synthesisers</li>
+</ul></li>
+</ul>
+</section>
+<section id="some-midi-controllers-i-have" class="slide level2">
+<h2>Some MIDI controllers I have</h2>
+<ul>
+<li><p>Arturia Keystep 37 Often used in <a
+href="https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqwwQoyy">loopop review
+videos</a></p></li>
+<li><p>KORG SQ-1. Often used by <a
+href="https://youtu.be/iyykGgOKj_Y?si=YpQKu-nq1MlqFnPk">Hainbach</a></p></li>
+<li><p>Roli Seabord. One fan is <a
+href="https://youtu.be/pSPJTMcpG98?si=6VKEU9r-_KV_QSGm">Andrew
+Huang</a></p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>## MIDI and Tidal</p>
+<ul>
+<li>SuperCollider can send and receive MIDI messages</li>
+<li>It converts these to and from OSC</li>
+<li>So <a
+href="https://tidalcycles.org/docs/configuration/MIDIOSC/midi">Tidal can
+work with MIDI</a></li>
+<li>Need to update your SuperCollider startup</li>
+<li>Send MIDI note on/off and CC values</li>
+<li>Read CC values e.g. for volume, filter control</li>
+<li>No easy way to read note on/off</li>
+</ul>
+</section>
+<section id="other-fun-things-to-do-with-midi" class="slide level2">
+<h2>Other fun things to do with MIDI</h2>
+<ul>
+<li><a href="https://youtu.be/oHUl6R8jRJ0?si=3m0PinoPjkrrwZaJ">Control
+acoustic instruments</a></li>
+<li><a
+href="https://discord.com/channels/778912359888060437/1072013045863301131">Adapt</a>
+<a href="https://hydra.ojack.xyz/">hydra</a> sketches and other <a
+href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">WebMIDI</a>
+things</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
