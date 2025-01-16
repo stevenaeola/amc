@@ -4,7 +4,9 @@
 
 ---
 
-What Electronic Music is Made of
+## Coming up
+
+- What Electronic Music is Made of
 - Music Protocols
 - MIDI note messages, setup and demo
 - MIDI Control Change (CC) and other messages
