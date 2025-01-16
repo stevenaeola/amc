@@ -1,5 +1,7 @@
 # Advanced Music Computation
+
 ## Interfacing and MIDI
+
 
 What Electronic Music is Made of
 - Music Protocols
