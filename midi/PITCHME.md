@@ -154,7 +154,7 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 
 ---
 
-## Tidal
+## Tidal with MIDI
 
 - SuperCollider can send and receive MIDI messages
 - It converts these to and from OSC

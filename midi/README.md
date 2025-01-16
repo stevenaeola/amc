@@ -139,7 +139,7 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 - Roli Seabord. One fan is [Andrew Huang](https://youtu.be/pSPJTMcpG98?si=6VKEU9r-_KV_QSGm)
 
 
-## Tidal
+## Tidal with MIDI
 
 - SuperCollider can send and receive MIDI messages
 - It converts these to and from OSC
