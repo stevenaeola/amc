@@ -12,7 +12,7 @@
 - MIDI Control Change (CC) and other messages
 - Limitations and extensions
 - Alternatives
-- controllers
+- Controllers
 - MIDI and Tidal
 - Other fun things to do with MIDI
 
