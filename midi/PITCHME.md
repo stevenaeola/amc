@@ -149,9 +149,7 @@
 
 - Arturia Keystep 37
 Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqwwQoyy)
-
 - KORG SQ-1. Often used by [Hainbach](https://youtu.be/iyykGgOKj_Y?si=YpQKu-nq1MlqFnPk)
-
 - Roli Seabord. One fan is [Andrew Huang](https://youtu.be/pSPJTMcpG98?si=6VKEU9r-_KV_QSGm)
 
 ---
