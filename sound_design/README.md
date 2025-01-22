@@ -103,7 +103,7 @@
 - Low polyphony
 - No presets
 - Tuning issues: warming up
-- "Hot": high-ish voltage compared with other audio gear
+- "Hot": higher voltage than other audio gear
 - Need to generate CV for playing tunes
 
 Lots can be done in software
