@@ -115,10 +115,13 @@ Lots can be done in software
 - Introducing feedback into modulation becomes chaotic
 - As modulation rates increase analogue circuits break down
 - Digital implementation is more stable
+
+
 - Multiple sine-wave operators can be combined as carrier and modulator
 - Up to six operators is fairly common
 - Plenty of VSTs available inc free [dexed](https://www.kvraudio.com/product/dexed-by-digital-suburban)
 - Closer to acoustic instrument sounds than subtractive: "brassy" "bright" "cliched"
+- Very difficult to predict/program
 
 
 ## Sampling etc
