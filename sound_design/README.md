@@ -97,7 +97,7 @@
 - "Cool"? Especially flashing lights
 
 
-## Modular analogue synths - cons
+## Analogue synths - cons
 
 - Expensive (try [VCV rack](https://vcvrack.com/) for emulation)
 - Low polyphony
