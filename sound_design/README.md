@@ -91,7 +91,7 @@
 - Playable/hands-on
 - Configurable
 - [Eurorack](https://en.wikipedia.org/wiki/Eurorack) standard for power and physical housing
-- "Cool"?
+- "Cool"? Especially flashing lights
 
 
 ## Modular analogue synths - cons
