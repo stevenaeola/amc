@@ -29,6 +29,9 @@
 - Periodic/regular variation can be written as a sum of sines (Fourier)
 - Frequency spectrum of a sound represents the amplitudes at different frequencies
 - Spectrum distribution affects timbre
+
+---
+
 - Harmonics are integer multiples of fundamental frequency e.g. piano, violin, flute
 - Inharmonic sounds have non-rational overtones e.g. drums, bells
 - Electronic sound synthesis drives sound through voltage change
