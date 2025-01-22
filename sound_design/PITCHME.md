@@ -19,6 +19,7 @@
 - FM synthesis
 - Sampling (inc granular, wavetable)
 - Options for sound design
+- Summary/Tips
 
 ---
 
