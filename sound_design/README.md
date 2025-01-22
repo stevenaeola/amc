@@ -88,12 +88,12 @@
   - Can trigger two different envelopes at once
 
 
-## Modular analogue synths - pros
+## Analogue synths - pros
 
 - "Warm"?
 - Playable/hands-on
 - Configurable
-- [Eurorack](https://en.wikipedia.org/wiki/Eurorack) standard for power and physical housing
+- [Eurorack](https://en.wikipedia.org/wiki/Eurorack) modular standard for power and physical housing
 - "Cool"? Especially flashing lights
 
 
