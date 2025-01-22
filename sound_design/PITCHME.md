@@ -69,7 +69,7 @@
 - Pulse Width Modulation (PWM) of square waves
 - Change volume (tremolo)
 - Change pitch (vibrato)
-- Slightly de-tuned second (and third ...) oscillator is good
+- Slightly de-tuned second (and third ...) oscillator
   - Interference patterns create beating
 
 ---
