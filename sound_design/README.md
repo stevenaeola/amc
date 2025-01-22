@@ -9,6 +9,7 @@
 - Scales
 - MIDI
 
+
 ## Coming up
 
 - Fundamentals

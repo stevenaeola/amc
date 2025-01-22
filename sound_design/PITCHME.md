@@ -11,6 +11,7 @@
 - MIDI
 
 ---
+
 ## Coming up
 
 - Fundamentals
