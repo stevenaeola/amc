@@ -54,11 +54,10 @@
 - Filter it with
   - Low pass filter (LPF)
   - High pass filter (HPF)
-  - Band pass filter (BPF)
 - Simple filters have
   - Cutoff frequency (Hz) usually variable
   - Attenuation/roll-off (dB per octave) often fixed
-- BPF is a LPF/HPF combination
+- Band pass filter (BPF) is a LPF/HPF combination
 - Filters can have resonance: boost at cutoff
 
 ---
