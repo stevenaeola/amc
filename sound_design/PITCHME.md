@@ -41,10 +41,10 @@
 ## Sound Synthesis Techniques
 
 - Additive - uncommon. Sine waves in electronics are hard
-- Subtractive from 1970s e.g. [Minimoog](https://en.wikipedia.org/wiki/Minimoog) 
-- Frequency Modulation from 1980s e.g. [DX7](https://en.wikipedia.org/wiki/Yamaha_DX7) 
-- Sampling from 1980s e.g. [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI)
-- Physical modelling from 1990s e.g. Karplus Strong, recently [Pianoteq](https://www.modartt.com/pianoteq_overview)
+- Subtractive from 1970s e.g. [Minimoog](https://en.wikipedia.org/wiki/Minimoog) on [Pink Floyd](https://youtu.be/cWGE9Gi0bB0?si=5gvQkYuXl9wAKySN)
+- Frequency Modulation from 1980s e.g. [DX7](https://en.wikipedia.org/wiki/Yamaha_DX7) on [Band Aid](https://youtu.be/bmj7KlIut1w?si=iGlbCDPS_-oKRAtp)
+- Sampling from 1980s e.g. [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI) on [Kate Bush](https://youtu.be/wp43OdtAAkM?si=bsbmOVkhrkL96T_w)
+- Physical modelling from 1990s e.g. recently [Pianoteq](https://www.modartt.com/pianoteq_overview)
 
 ---
 
