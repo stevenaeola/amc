@@ -107,7 +107,8 @@
 - Try [manipulating the sample](https://tidalcycles.org/docs/reference/workshop/#manipulating-samples)
 
 ---
-# Effects (FX)
+
+## Effects (FX)
 
 - Delay (digital simple, analogue hard)
   - Flanger
