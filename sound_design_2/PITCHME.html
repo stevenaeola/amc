@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>PITCHME</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="advanced-music-computation" class="slide level1">
+<h1>Advanced Music Computation</h1>
+<h2 id="sound-design-2">Sound design 2</h2>
+</section>
+<section class="slide level1">
+
+<h2 id="previously">Previously</h2>
+<ul>
+<li>Subtractive synthesis</li>
+<li>Modular synthesisers</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="coming-up">Coming up</h2>
+<ul>
+<li>FM synthesis</li>
+<li>Sampling (inc granular, wavetable)</li>
+<li>Options for sound design</li>
+<li>Summary/Tips</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="sound-synthesis-techniques">Sound Synthesis Techniques</h2>
+<ul>
+<li>Additive - uncommon. Sine waves in electronics are hard</li>
+<li>Subtractive from 1970s e.g. <a
+href="https://en.wikipedia.org/wiki/Minimoog">Minimoog</a> on <a
+href="https://youtu.be/cWGE9Gi0bB0?si=5gvQkYuXl9wAKySN">Pink
+Floyd</a></li>
+<li>Frequency Modulation from 1980s e.g. <a
+href="https://en.wikipedia.org/wiki/Yamaha_DX7">DX7</a> on <a
+href="https://youtu.be/bmj7KlIut1w?si=iGlbCDPS_-oKRAtp">Band
+Aid</a></li>
+<li>Sampling from 1980s e.g. <a
+href="https://en.wikipedia.org/wiki/Fairlight_CMI">Fairlight</a> on <a
+href="https://youtu.be/wp43OdtAAkM?si=bsbmOVkhrkL96T_w">Kate
+Bush</a></li>
+<li>Physical modelling from 1990s e.g. recently <a
+href="https://www.modartt.com/pianoteq_overview">Pianoteq</a></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="subtractive-synthesis-recap">Subtractive Synthesis (recap)</h2>
+<ul>
+<li>Start with a “rich” oscillator: saw; square; triangle; noise</li>
+<li>Filter it with
+<ul>
+<li>Low pass filter (LPF)</li>
+<li>High pass filter (HPF)</li>
+</ul></li>
+<li>Simple filters have
+<ul>
+<li>Cutoff frequency (Hz) usually variable</li>
+<li>Attenuation/roll-off (dB per octave) often fixed</li>
+</ul></li>
+<li>Band pass filter (BPF) is a LPF/HPF combination</li>
+<li>Filters can have resonance: boost at cutoff</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="adding-movement-a-constant-sound">Adding movement a constant
+sound</h2>
+<ul>
+<li>On a modular synth you twiddle knobs</li>
+<li>Filter sweeps (changes to cutoff) sound good</li>
+<li>Pulse Width Modulation (PWM) of square waves</li>
+<li>Change volume (tremolo)</li>
+<li>Change pitch (vibrato)</li>
+<li>Slightly de-tuned second (and third …) oscillator
+<ul>
+<li>Interference patterns create beating</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="modulation">Modulation</h2>
+<ul>
+<li>Change things automatically</li>
+<li>Low Frequency Oscillator (LFO)
+<ul>
+<li>Typically below audio frequency</li>
+</ul></li>
+<li>Envelope generator</li>
+<li>In modular synth these are controlled with voltage (CV)
+<ul>
+<li>VCO Voltage Controlled Oscillator (V/oct, Hz/V)</li>
+<li>VCF Voltage Controlled Filter</li>
+<li><h2 id="vca-voltage-controlled-amplifier">VCA Voltage Controlled
+Amplifier</h2></li>
+</ul></li>
+</ul>
+<h2 id="fm-synthesis">FM Synthesis</h2>
+<ul>
+<li>Analogue synths can do frequency modulation (vibrato, <a
+href="https://en.wikipedia.org/wiki/Ring_modulation">ring
+modulation</a>)</li>
+<li>Introducing feedback into modulation becomes chaotic</li>
+<li>As modulation rates increase analogue circuits break down</li>
+<li>Digital implementation is more stable</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<ul>
+<li>Multiple sine-wave operators can be combined as carrier and
+modulator</li>
+<li>Up to six operators is fairly common</li>
+<li>Plenty of VSTs available inc free <a
+href="https://www.kvraudio.com/product/dexed-by-digital-suburban">dexed</a></li>
+<li>Closer to acoustic instrument sounds than subtractive: “brassy”;
+“bright”; “cliched”</li>
+<li>Very difficult to predict/program</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="sampling-etc">Sampling etc</h2>
+<ul>
+<li>Record a sound and play it back when asked</li>
+<li><a href="https://en.wikipedia.org/wiki/Mellotron">Mellotron</a> used
+by <a
+href="https://en.wikipedia.org/wiki/Strawberry_Fields_Forever">Beatles</a></li>
+<li>Digital versions can replay changing pitch through changing speed <a
+href="https://en.wikipedia.org/wiki/Fairlight_CMI">Fairlight</a></li>
+<li>This also changes the length of sample sound</li>
+<li><a
+href="https://en.wikipedia.org/wiki/Granular_synthesis">Granular</a>
+handles this by changing speed of smaller grains</li>
+<li><a
+href="https://en.wikipedia.org/wiki/Wavetable_synthesis">Wavetable</a>
+synthesis generates waveform (one period) which evolve over time e.g. <a
+href="https://vital.audio/">vital</a></li>
+<li>Sample &gt; grain &gt; waveform</li>
+</ul>
+</section>
+<section id="sampling-exercise" class="slide level1">
+<h1>Sampling exercise</h1>
+<ul>
+<li>Choose a sample that sounds interesting from <a
+href="https://freesound.org/">freesound</a></li>
+<li>If necessary use <a
+href="https://www.audacityteam.org/">Audacity</a> to trim, normalise,
+export in WAV</li>
+<li><a
+href="https://tidalcycles.org/docs/configuration/AudioSamples/audiosamples/">Install</a>
+it for use by SuperCollider/Tidal</li>
+<li>Play the sample in Tidal</li>
+<li>Try <a
+href="https://tidalcycles.org/docs/reference/workshop/#manipulating-samples">manipulating
+the sample</a></li>
+</ul>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td># Effects (FX)</td>
+</tr>
+<tr class="even">
+<td>- Delay (digital simple, analogue hard) - Flanger - Chorus - Reverb
+(analogue simpler, digital hard) - Pitch-shifting - Formants/vowels and
+vocoders - Everybody likes <a
+href="https://valhalladsp.com/shop/reverb/valhalla-supermassive/">Valhalla
+Supermassive</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-for-sound-design">Options for sound design</h2>
+<ul>
+<li>Analogue and digital standalone inc modular, guitar pedals</li>
+<li>Inside DAW with FX like delay and EQ modulated by LFO</li>
+<li>With VSTs from simple one-knob FX to beasts like <a
+href="https://vital.audio/">vital</a> (free)</li>
+<li>Code your own high-level with <a
+href="https://faust.grame.fr/">faust</a></li>
+<li>Code your own low-level with <a
+href="https://supercollider.github.io/">SuperCollider</a> (see <a
+href="./bassdrone.scd">example</a> or <a
+href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">WebAudio</a></li>
+<li>Build your own (cheap) hardware with <a
+href="https://hackaday.com/tag/logic-noise/">Hackaday Logic
+Noise</a></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="summarytips">Summary/Tips</h2>
+<ul>
+<li>Lots of ways to do it: hardware/software; low-level/high-level;
+cheap/expensive</li>
+<li>Think about how to control it (or not: drone)</li>
+<li>Limit yourself: less is more</li>
+<li>Think about sounds together
+<ul>
+<li>distinct instruments in their own frequency range</li>
+<li>stereo separation</li>
+</ul></li>
+<li>Keep sound design time separate from composition</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

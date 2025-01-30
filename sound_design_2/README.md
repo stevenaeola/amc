@@ -2,14 +2,12 @@
 
 ## Sound design 2
 
----
 
 ## Previously
 
 - Subtractive synthesis
 - Modular synthesisers
 
----
 
 ## Coming up
 
@@ -18,7 +16,6 @@
 - Options for sound design
 - Summary/Tips
 
----
 
 ## Sound Synthesis Techniques
 
@@ -28,7 +25,6 @@
 - Sampling from 1980s e.g. [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI) on [Kate Bush](https://youtu.be/wp43OdtAAkM?si=bsbmOVkhrkL96T_w)
 - Physical modelling from 1990s e.g. recently [Pianoteq](https://www.modartt.com/pianoteq_overview)
 
----
 
 ## Subtractive Synthesis (recap)
 
@@ -42,7 +38,6 @@
 - Band pass filter (BPF) is a LPF/HPF combination
 - Filters can have resonance: boost at cutoff
 
----
 
 ## Adding movement a constant sound
 
@@ -54,7 +49,6 @@
 - Slightly de-tuned second (and third ...) oscillator
   - Interference patterns create beating
 
----
 
 ## Modulation
 
@@ -66,7 +60,6 @@
   - VCO Voltage Controlled Oscillator (V/oct, Hz/V)
   - VCF Voltage Controlled Filter
   - VCA Voltage Controlled Amplifier
----
 
 ## FM Synthesis
 
@@ -75,7 +68,6 @@
 - As modulation rates increase analogue circuits break down
 - Digital implementation is more stable
 
---- 
 
 - Multiple sine-wave operators can be combined as carrier and modulator
 - Up to six operators is fairly common
@@ -83,7 +75,6 @@
 - Closer to acoustic instrument sounds than subtractive: "brassy"; "bright"; "cliched"
 - Very difficult to predict/program
 
----
 
 ## Sampling etc
 
@@ -95,7 +86,6 @@
 - [Wavetable](https://en.wikipedia.org/wiki/Wavetable_synthesis) synthesis generates waveform (one period) which evolve over time e.g. [vital](https://vital.audio/)
 - Sample > grain > waveform
 
----
 
 # Sampling exercise
 
@@ -105,7 +95,6 @@
 - Play the sample in Tidal
 - Try [manipulating the sample](https://tidalcycles.org/docs/reference/workshop/#manipulating-samples)
 
----
 # Effects (FX)
 
 - Delay (digital simple, analogue hard)
@@ -116,7 +105,6 @@
 - Formants/vowels and vocoders
 - Everybody likes [Valhalla Supermassive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
 
----
 
 ## Options for sound design
 
@@ -127,7 +115,6 @@
 - Code your own low-level with [SuperCollider](https://supercollider.github.io/) (see [example](./bassdrone.scd) or [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 - Build your own (cheap) hardware with [Hackaday Logic Noise](https://hackaday.com/tag/logic-noise/)
 
----
 
 ## Summary/Tips
 
