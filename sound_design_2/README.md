@@ -60,7 +60,7 @@
   - VCO Voltage Controlled Oscillator (V/oct, Hz/V)
   - VCF Voltage Controlled Filter
   - VCA Voltage Controlled Amplifier
-  
+
 
 ## FM Synthesis
 
@@ -88,7 +88,7 @@
 - Sample > grain > waveform
 
 
-# Sampling exercise
+## Sampling exercise
 
 - Choose a sample that sounds interesting from [freesound](https://freesound.org/)
 - If necessary use [Audacity](https://www.audacityteam.org/) to trim, normalise, export in WAV
