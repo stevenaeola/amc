@@ -114,7 +114,7 @@
 - Inside DAW with FX like delay and EQ modulated by LFO
 - With VSTs from simple one-knob FX to beasts like [vital](https://vital.audio/) (free)
 - Code your own high-level with [faust](https://faust.grame.fr/)
-- Code your own low-level with [SuperCollider](https://supercollider.github.io/) (see [example](./bassdrone.scd) or [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- Code your own low-level with [SuperCollider](https://supercollider.github.io/) (see [example](./bassdrone.scd)) or [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 - Build your own (cheap) hardware with [Hackaday Logic Noise](https://hackaday.com/tag/logic-noise/)
 
 
