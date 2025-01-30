@@ -66,6 +66,7 @@
   - VCO Voltage Controlled Oscillator (V/oct, Hz/V)
   - VCF Voltage Controlled Filter
   - VCA Voltage Controlled Amplifier
+  
 ---
 
 ## FM Synthesis
