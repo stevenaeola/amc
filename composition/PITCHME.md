@@ -51,7 +51,7 @@ If you were given a natural language description or computational output, what w
 - Serialism and counterpoint: inversion, retrograde, canon, metrical canon
 - Augmentation: make (some) notes longer; make (some) intervals wider. Diminution
 - Remapping: change from one scale or time signature to another
-- Phasing and other polymetric techniques, Euclidean rhythms
+- Phasing and other polymetric techniques
 - Harmonization: functional harmony and substitution; harmonic planing; tintinnabulation
 - Polymeters and polychords
 
