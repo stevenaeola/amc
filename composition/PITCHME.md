@@ -67,6 +67,8 @@ Not too much: simple is often good e.g. repeat up an octave
 
 - OR start with a technique you want to use e.g. tintinnabulation, phasing, scalar mapping
 
+---
+
 - OR start with something conceptual you want to write about e.g. free speech
 
 - OR start with a set of constraints e.g. 5/4 mixolydian mode, write it in 20 minutes
