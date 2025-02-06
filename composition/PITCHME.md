@@ -38,7 +38,7 @@ If you were given a natural language description or computational output, what w
 
 ## Starting material
 
-- Take existing music, analyse it and create something with the same high-level structure e.g. form, development of texture
+- Take existing music, analyse it and create something with the same high-level structure e.g. form, development of texture, harmonic tempo
 
 - Take existing music and extract small-scale content e.g. melody, chords, rhythm, samples and develop/overlay them
 
@@ -52,7 +52,7 @@ If you were given a natural language description or computational output, what w
 - Augmentation: make (some) notes longer; make (some) intervals wider. Diminution
 - Remapping: change scale or time signature
 - Phasing and other polymetric techniques
-- Harmonization: functional harmony and substitution; harmonic planing; tintinnabulation
+- Harmonization: functional harmony and substitution; harmonic planing; tintinnabulation; 
 - Polymeters and polychords
 
 Not too much: simple is often good e.g. repeat up an octave
@@ -79,7 +79,7 @@ Not too much: simple is often good e.g. repeat up an octave
 
 - Record ideas when you have them (text or audio)
 - Experiment: do random things; make mistakes; improvise
-- Refine: what could I change; what could I add; what could I remove
+- Refine: change; add; remove
 - Reflect
 - Work on one thing at a time e.g. sound design; melody; harmony; structure
 
