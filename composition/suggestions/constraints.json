@@ -1,0 +1,18 @@
+{
+    "structure": ["none", "chorus/verse", "ABC", "arch e.g. ABCBA"],
+    "pitch": {
+        "none": "Unpitched sound only",
+        "microtonal": "microtonal",
+        "scale": ["major", "minor", "pentatonic", "blues", "chromatic", "octatonic", "whole tone", "weird"],
+        "highest": "MIDI 1-127",
+        "lowest": "MIDI 1-127"
+    },
+    "instrumentation": {
+        "number of distinct instruments": "1-6",
+        "max number of sounds playing at once": "1-50",
+        "min number of sounds playing at once": "1-50",
+        "sound source": ["sample", "synth", "acoustic"]
+    },
+    "melody": ["composed", "copied"]
+
+}
