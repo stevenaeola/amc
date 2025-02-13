@@ -1,0 +1,20 @@
+beats_per_minute = 50
+
+beats_per_bar = 7
+
+sc = "major"
+
+setcps (beats_per_minute/(beats_per_bar*60))
+
+--- these were generated from random.org
+melody = "5 3 6 1 0 4 2"
+
+d1 $ note (scale sc melody) 
+  # sound "supercomparator"
+
+--- chords one per bar
+--- this is a classic I-vi-IV-V chord progression
+chords = "[0 5 3 4]/4"
+
+d2 $ note (scale sc (chords |+ "[0,2,4]"))
+   # sound "superhammond"
