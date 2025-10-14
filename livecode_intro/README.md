@@ -4,7 +4,7 @@
 
 `performing arts form and a creativity technique centred upon the writing of source code and the use of interactive programming in an improvised way`
 
-[https://en.wikipedia.org/wiki/Live_coding](wikipedia)
+[wikipedia](https://en.wikipedia.org/wiki/Live_coding)
 
 
 
