@@ -94,7 +94,8 @@ let bass = &quot;[0 _ _ 3 0 4 0 _]/4&quot;</code></pre>
 <section id="chords-and-arpeggios" class="slide level2">
 <h2>Chords and arpeggios</h2>
 <p>Add arpeggiated chords to bass notes (in separate voice) with</p>
-<pre><code>note(&quot;[0 4 7 4]*4&quot;.add(bass).scale(&quot;major&quot;)).sound(&quot;gm_acoustic_guitar_nylon&quot;)</code></pre>
+<pre><code>note(&quot;[0 4 7 4]*4&quot;.add(bass)
+  .scale(&quot;major&quot;)).sound(&quot;gm_acoustic_guitar_nylon&quot;)</code></pre>
 <p>What happens if you add the arp to the bass instead? Try
 <code>add.out()</code></p>
 <p>Try adding other notes into chord: replacement or extra</p>

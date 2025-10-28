@@ -56,7 +56,8 @@ Add bass in another voice
 Add arpeggiated chords to bass notes (in separate voice) with
 
 ```
-note("[0 4 7 4]*4".add(bass).scale("major")).sound("gm_acoustic_guitar_nylon")
+note("[0 4 7 4]*4".add(bass)
+  .scale("major")).sound("gm_acoustic_guitar_nylon")
 ```
 
 What happens if you add the arp to the bass instead? Try `add.out()`
