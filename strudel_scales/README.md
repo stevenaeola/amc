@@ -14,14 +14,17 @@ Duplicate some rhythms with bd sd cp hh
 Design two sounds: one for bass, one for tune
 
 - in strudel sidebar, choose sounds:synths and search for 'bass'
-- try playing with some low notes e.g. `note("c2 g2").sound("gm_acoustic_bass")`
-- tune sound, search for 'lead' and 'piano'. Play `note("c4 f4 bf4 ef4")`
+- try playing with some low notes 
+- e.g. `note("c2 g2").sound("gm_acoustic_bass")`
+- tune sound, search for 'lead' and 'piano'. 
+- play `note("c4 f4 bf4 ef4")`
 
 
 
 ## Audio effects
 
 See <https://strudel.cc/learn/effects>
+
 - change volume with `.postgain()` (1 is default)
 - add reverb with `.room()` 0-1
 - filter with `.lpf()` or `.hpf()` in Hz
