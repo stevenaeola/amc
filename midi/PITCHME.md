@@ -13,7 +13,7 @@
 - Limitations and extensions
 - Alternatives
 - Controllers
-- MIDI and Tidal
+- MIDI and Strudel
 - Other fun things to do with MIDI
 
 ---
@@ -137,7 +137,7 @@
   - Time tags can be relative or absolute
   - High-resolution data
   - Symbolic naming
-  - Used by SuperCollider (and hence Tidal)
+  - Used by SuperCollider (and hence Tidal/Strudel)
 - Control Voltage (CV) 1995 (Eurorack)
   - Continuous time and voltage range: analogue
   - Gates and triggers to turn things on and off
@@ -154,12 +154,9 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 
 ---
 
-## Tidal with MIDI
+## Strudel with MIDI
 
-- SuperCollider can send and receive MIDI messages
-- It converts these to and from OSC
-- So [Tidal can work with MIDI](https://tidalcycles.org/docs/configuration/MIDIOSC/midi)
-- Need to update your SuperCollider startup
+- Strudel can [send and receive MIDI messages](https://strudel.cc/learn/input-output/)
 - Send MIDI note on/off and CC values
 - Read CC values e.g. for volume, filter control
 - No easy way to read note on/off
@@ -169,5 +166,5 @@ Often used in [loopop review videos](https://youtu.be/I3iaHNIJFsg?si=hpDtUAKiLqw
 ## Other fun things to do with MIDI
 
 - [Control acoustic instruments](https://youtu.be/oHUl6R8jRJ0?si=3m0PinoPjkrrwZaJ)
-- [Adapt](https://discord.com/channels/778912359888060437/1072013045863301131) [hydra](https://hydra.ojack.xyz/) sketches
+- Adapt [hydra](https://hydra.ojack.xyz/) sketches
 and other [WebMIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API) things
