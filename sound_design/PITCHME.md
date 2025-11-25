@@ -6,7 +6,7 @@
 
 ## Previously
 
-- Live coding with tidal
+- Live coding with strudel
 - Scales
 - MIDI
 
@@ -40,8 +40,9 @@
 
 ## Sound Synthesis Techniques
 
-- Additive - uncommon. Sine waves in electronics are hard
+
 - Subtractive from 1970s e.g. [Minimoog](https://en.wikipedia.org/wiki/Minimoog) on [Pink Floyd](https://youtu.be/cWGE9Gi0bB0?si=5gvQkYuXl9wAKySN)
+- Additive - less common. Sine waves in electronics are harder
 - Frequency Modulation from 1980s e.g. [DX7](https://en.wikipedia.org/wiki/Yamaha_DX7) on [Band Aid](https://youtu.be/bmj7KlIut1w?si=iGlbCDPS_-oKRAtp)
 - Sampling from 1980s e.g. [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI) on [Kate Bush](https://youtu.be/wp43OdtAAkM?si=bsbmOVkhrkL96T_w)
 - Physical modelling from 1990s e.g. recently [Pianoteq](https://www.modartt.com/pianoteq_overview)
@@ -141,7 +142,7 @@ Lots can be done in software
 ## Sampling etc
 
 - Record a sound and play it back when asked
-- [Mellotron](https://en.wikipedia.org/wiki/Mellotron) used by [Beatles](https://en.wikipedia.org/wiki/Strawberry_Fields_Forever)
+- [Mellotron](https://en.wikipedia.org/wiki/Mellotron) used by [Beatles](https://youtu.be/HtUH9z_Oey8?si=_HGBkLFrShaTbQj-)
 - Digital versions can replay changing pitch through changing speed [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI)
 - This also changes the length of sample sound
 - [Granular](https://en.wikipedia.org/wiki/Granular_synthesis) handles this by changing speed of smaller grains
@@ -182,3 +183,9 @@ Lots can be done in software
   - distinct instruments in their own frequency range
   - stereo separation
 - Keep sound design time separate from composition
+
+----
+
+## Try yourself
+
+- [Ambient techno tutorial](https://youtu.be/ri9lZVR_eRA?si=nV1T4aEo_87Q8vVX) with VCV rack
