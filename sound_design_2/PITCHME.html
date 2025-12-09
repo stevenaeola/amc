@@ -7,26 +7,32 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reveal.css">
   <style>
     .reveal .sourceCode {  /* see #7635 */
       overflow: visible;
     }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/simple.css" id="theme">
 </head>
 <body>
   <div class="reveal">
@@ -136,6 +142,9 @@ modulation</a>)</li>
 <li>Introducing feedback into modulation becomes chaotic</li>
 <li>As modulation rates increase analogue circuits break down</li>
 <li>Digital implementation is more stable</li>
+<li><a
+href="https://www.soundonsound.com/techniques/introduction-frequency-modulation">Maths
+is more complex</a> than for AM</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -158,6 +167,14 @@ href="https://www.kvraudio.com/product/dexed-by-digital-suburban">dexed</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Mellotron">Mellotron</a> used
 by <a
 href="https://en.wikipedia.org/wiki/Strawberry_Fields_Forever">Beatles</a></li>
+<li>Steve Reich did early work with tape including <a
+href="https://youtu.be/Jsd50gJo5q4?si=XAcp0kQZlZWggAMN">It’s Gonna
+Rain</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
 <li>Digital versions can replay changing pitch through changing speed <a
 href="https://en.wikipedia.org/wiki/Fairlight_CMI">Fairlight</a></li>
 <li>This also changes the length of sample sound</li>
@@ -174,18 +191,21 @@ href="https://vital.audio/">vital</a></li>
 <section id="sampling-exercise" class="slide level2">
 <h2>Sampling exercise</h2>
 <ul>
-<li>Choose a sample that sounds interesting from <a
-href="https://freesound.org/">freesound</a></li>
+<li>Choose three samples that sound interesting from <a
+href="https://freesound.org/">freesound</a>
+<ul>
+<li>A short unpitched sound</li>
+<li>A pitched note</li>
+<li>A longer “soundscape”</li>
+</ul></li>
 <li>If necessary use <a
 href="https://www.audacityteam.org/">Audacity</a> to trim, normalise,
 export in WAV</li>
-<li><a
-href="https://tidalcycles.org/docs/configuration/AudioSamples/audiosamples/">Install</a>
-it for use by SuperCollider/Tidal</li>
-<li>Play the sample in Tidal</li>
-<li>Try <a
-href="https://tidalcycles.org/docs/reference/workshop/#manipulating-samples">manipulating
-the sample</a></li>
+<li>Install it for use by <a
+href="https://strudel.cc/learn/samples/">Strudel</a></li>
+<li>Play the sample in Strudel</li>
+<li>Try manipulating the sample by changing the speed, start time and
+length</li>
 </ul>
 </section>
 <section id="effects-fx" class="slide level2">
@@ -196,8 +216,8 @@ the sample</a></li>
 <li>Flanger</li>
 <li>Chorus</li>
 </ul></li>
-<li>Reverb (analogue simpler, digital hard)</li>
-<li>Pitch-shifting</li>
+<li>Reverb (analogue/physical simpler, digital hard)</li>
+<li>Pitch-shifting (and other granular effects)</li>
 <li>Formants/vowels and vocoders</li>
 <li>Everybody likes <a
 href="https://valhalladsp.com/shop/reverb/valhalla-supermassive/">Valhalla
@@ -240,12 +260,12 @@ cheap/expensive</li>
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/dist/reveal.js"></script>
 
   <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/zoom/zoom.js"></script>
 
   <script>
 

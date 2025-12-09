@@ -68,6 +68,7 @@
 - Introducing feedback into modulation becomes chaotic
 - As modulation rates increase analogue circuits break down
 - Digital implementation is more stable
+- [Maths is more complex](https://www.soundonsound.com/techniques/introduction-frequency-modulation) than for AM
 
 
 - Multiple sine-wave operators can be combined as carrier and modulator
@@ -81,6 +82,9 @@
 
 - Record a sound and play it back when asked
 - [Mellotron](https://en.wikipedia.org/wiki/Mellotron) used by [Beatles](https://en.wikipedia.org/wiki/Strawberry_Fields_Forever)
+- Steve Reich did early work with tape including [It's Gonna Rain](https://youtu.be/Jsd50gJo5q4?si=XAcp0kQZlZWggAMN)
+
+
 - Digital versions can replay changing pitch through changing speed [Fairlight](https://en.wikipedia.org/wiki/Fairlight_CMI)
 - This also changes the length of sample sound
 - [Granular](https://en.wikipedia.org/wiki/Granular_synthesis) handles this by changing speed of smaller grains
@@ -90,11 +94,14 @@
 
 ## Sampling exercise
 
-- Choose a sample that sounds interesting from [freesound](https://freesound.org/)
+- Choose three samples that sound interesting from [freesound](https://freesound.org/)
+  - A short unpitched sound
+  - A pitched note
+  - A longer "soundscape"
 - If necessary use [Audacity](https://www.audacityteam.org/) to trim, normalise, export in WAV
-- [Install](https://tidalcycles.org/docs/configuration/AudioSamples/audiosamples/) it for use by SuperCollider/Tidal
-- Play the sample in Tidal
-- Try [manipulating the sample](https://tidalcycles.org/docs/reference/workshop/#manipulating-samples)
+- Install it for use by [Strudel](https://strudel.cc/learn/samples/)
+- Play the sample in Strudel
+- Try manipulating the sample by changing the speed, start time and length
 
 
 ## Effects (FX)
@@ -102,8 +109,8 @@
 - Delay (digital simple, analogue hard)
   - Flanger
   - Chorus
-- Reverb (analogue simpler, digital hard)
-- Pitch-shifting
+- Reverb (analogue/physical simpler, digital hard)
+- Pitch-shifting (and other granular effects)
 - Formants/vowels and vocoders
 - Everybody likes [Valhalla Supermassive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
 
