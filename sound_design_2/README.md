@@ -100,8 +100,7 @@
   - A longer "soundscape"
 - If necessary use [Audacity](https://www.audacityteam.org/) to trim, normalise, export in WAV
 - Install it for use by [Strudel](https://strudel.cc/learn/samples/)
-- Play the sample in Strudel
-- Try manipulating the sample by changing the speed, start time and length
+- Try manipulating the samples by changing the speed, start time and length
 
 
 ## Effects (FX)
