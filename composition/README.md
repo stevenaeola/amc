@@ -26,12 +26,34 @@ Using natural language to explain a piece of music, what kind of things would yo
 
 ## The people said
 
+- instruments
+- texture (smooth/jumpy)
+- genre (dnB classical free jazz)
+- emotion from harmony (sad celebratory)
+- key/tonality (C major Bb mixolydian)
+- density/complexity (notes per second, polyphony/layers)
+- speed (bpm and harmonic tempo)
+- geography/cultural
+- sound purity (distortion/ screaming)
+- rhythmic features (swing, duplets, syncopation)
+- age (decade)
+- temporal consistency (how much it changes)
+- structure (verse/chorus fugue)
+
 
 
 Using computational processes to analyse or generate a piece of music, what kind of outputs would you get?
 
 
 ## The people said
+
+- statistics (MFCC, tempo)
+- frequency range (Hz over time)
+- score (staves clefs etc)
+- spectrogram
+- parse trees (symbols as chord)
+- patterns (longest substring of notes, or maybe rhythm)
+- beat
 
 
 
