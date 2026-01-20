@@ -81,6 +81,7 @@ If you were given a natural language description or computational output, what w
 ## Development
 
 - Serialism and counterpoint: 
+   - transposition (add)
   - inversion ([mul(-1)](https://strudel.cc/functions/value-modifiers/#mul))
   - retrograde ([rev](https://strudel.cc/learn/time-modifiers/#rev))
   - canon ([late](https://strudel.cc/learn/time-modifiers/#late))
