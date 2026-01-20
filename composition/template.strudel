@@ -1,0 +1,18 @@
+let beats_per_minute = 50
+
+let beats_per_bar = 7
+
+let sc = 'major'
+
+setcpm(beats_per_minute/(beats_per_bar))
+
+// these were generated from random.org
+let melody = "5 3 6 1 0 4 2"
+
+$: note(melody.scale(sc)).sound("piano").room(0.8)
+
+// chords one per bar
+// this is a classic I-vi-IV-V chord progression
+let chords = "<0 5 3 4>"
+
+$: note(chords.add("[0,4]").scale(sc).sub(12)).sound("gm_fretless_bass").room(0.6).gain(0.5)

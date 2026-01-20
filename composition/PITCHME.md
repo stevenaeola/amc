@@ -6,7 +6,7 @@
 
 ## Previously
 
-- Live coding with tidal
+- Live coding with strudel
 - Scales
 - MIDI
 - Sound design
@@ -28,7 +28,17 @@ Using natural language to explain a piece of music, what kind of things would yo
 
 ---
 
+## The people said
+
+
+---
+
 Using computational processes to analyse or generate a piece of music, what kind of outputs would you get?
+
+---
+
+## The people said
+
 
 ---
 
@@ -48,8 +58,11 @@ If you were given a natural language description or computational output, what w
 
 ## Development
 
-- Serialism and counterpoint: inversion, retrograde, canon, metrical canon
+- Serialism and counterpoint: inversion ([mul(-1)](https://strudel.cc/functions/value-modifiers/#mul)), retrograde ([rev](https://strudel.cc/learn/time-modifiers/#rev)), canon ([late](https://strudel.cc/learn/time-modifiers/#late)), metrical canon ([slow](https://strudel.cc/learn/time-modifiers/#slow))
 - Augmentation: make (some) notes longer; make (some) intervals wider. Diminution
+
+---
+
 - Remapping: change scale or time signature
 - Phasing and other polymetric techniques
 - Harmonization: functional harmony and substitution; harmonic planing; tintinnabulation; 
@@ -57,6 +70,7 @@ If you were given a natural language description or computational output, what w
 
 Not too much: simple is often good e.g. repeat up an octave
 
+- [arrange](https://strudel.cc/learn/factories/#arrange)
 --- 
 
 ## Compositional processes
@@ -98,6 +112,6 @@ You are more likely to produce good stuff if you produce a lot of stuff
 
 ## Next time ...
 
-Humans and computers together
+Physical devices
 
 Or something else?

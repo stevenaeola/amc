@@ -1,0 +1,37 @@
+  a1 = "[0 1 2 2 0 2 1 ~]"
+  a4 = "[0 [1 2] 0 0 -1 1 0 ~]"
+  apart = [a1,a1,a1,a4]
+  apart2 = apart ++ apart
+  b1 = "[0 4 5 3 4 5 4 2]"
+  b2 = "[3 4 3 2 3 2 1 2]"
+  b4 = "[3 4 3 2 1 2 0 ~]"
+  bpart = [b1,b2,b1,b4]
+  a2b2 = apart ++ apart ++ bpart ++ bpart
+  gap x = every' x (x-1) (# silence)
+  harp l = n (scale "minor" $ cat l) |+ n "g6" # s "iac1" # midichan 5
+  piano l = n (scale "minor" $ cat l) |+ n "g5" # s "iac1" # midichan 6
+
+
+   a5 = "{0 [1 2] 0 0 -1 1 0 ~ ~}%8"
+   a6 = rev a5
+
+   print (a6)
+
+  d1 $ n ((scale "minor" a4) )  # s "superpiano" 
+
+d2 $ n (scale "minor" a4) |+ n "[0,5,10,15]"
+   # s "superpiano" 
+
+
+  d2 $ n (scale "minor" (a5 |+ "[0,<5 2>]")) # s "superpiano" 
+
+ d3 $ almostNever (#press 3) $ degradeBy 0.2 
+   $ fast 8 $ randslice 128
+    $ s "swifts"
+    # legato 0.9
+
+d4 $ n "[a2__ g2]/4" |+ n "[0,12]" # s "superhammond"
+
+hush
+
+n (scale "minor" (a5 |+ "[0,<5 2>]")) # s "superpiano" 

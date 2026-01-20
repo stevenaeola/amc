@@ -11,10 +11,12 @@ melody = "5 3 6 1 0 4 2"
 
 d1 $ note (scale sc melody) 
   # sound "supercomparator"
+  # room 0.8
 
 --- chords one per bar
 --- this is a classic I-vi-IV-V chord progression
 chords = "[0 5 3 4]/4"
 
-d2 $ note (scale sc (chords |+ "[0,2,4]"))
+d2 $ note (scale sc (chords |+ "[0,4]"))
+   |- note 12
    # sound "superhammond"
