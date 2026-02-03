@@ -46,4 +46,4 @@
 - Use a potentiometer (variable resistor) as a voltage divider
 - Connect the wiper (centre pin) to an ADC input
 - MIDI! Install the [adafruit library](https://circuitpython.org/libraries)
-- Look at some of the MIDI [examples](./examples/)
+- Look at some of the MIDI [examples](./examples/) start with organ
