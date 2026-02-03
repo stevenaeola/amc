@@ -31,6 +31,7 @@
 - Tutorial at [adafruit](https://learn.adafruit.com/welcome-to-circuitpython) or [youtube](https://www.youtube.com/@BuildWithProfG)
 - [Mu editor](https://codewith.mu/) (archived) or Visual Studio Code with [extension](https://learn.adafruit.com/using-the-circuitpython-extension-for-visual-studio-code/overview) 
 - [Download](https://circuitpython.org/downloads?q=pico) and [install](https://learn.adafruit.com/pico-w-wifi-with-circuitpython/installing-circuitpython) firmware (.UF2) for Pico W
+
 ---
 
 ## Wire up an LED
