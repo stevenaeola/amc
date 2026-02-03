@@ -44,3 +44,11 @@
 - Try programming [traffic lights](https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/traffic-light-and-pedestrian-crossing)
 
 ---
+
+## Inputs/Output
+
+- Connect a button with a pull-up resistor to ground and a GPIO input
+- Use a potentiometer (variable resistor) as a voltage divider
+- Connect the wiper (centre pin) to an ADC input
+- MIDI! Install the [adafruit library](https://circuitpython.org/libraries)
+- Look at some of the MIDI [examples](./examples/)
